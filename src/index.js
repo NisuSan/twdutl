@@ -46,22 +46,6 @@ const p = function (options) {
     }
 
     addUtilities(staticUtilities)
-
-    // const values = theme('lighting')
-    // var utilities = values.map(x => {
-    //   return {
-    //     [`.${e(`bg-light-${x}`)}`]: { 'background-color': `rgba(255, 255, 255, ${x}%)` },
-    //   }
-    // })
-    
-    // matchUtilities(
-    //   {
-    //     'bg-light': (value) => ({
-    //       'background-color': `rgba(255, 255, 255, ${value}%)`
-    //     })
-    //   },
-    //   { values: {lighting: [ 9, 18, 24 ]} }
-    // )
   })
 }
 

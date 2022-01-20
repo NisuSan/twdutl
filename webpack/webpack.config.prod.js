@@ -1,4 +1,15 @@
 const path = require('path')
+const CopyPlugin = require("copy-webpack-plugin")
+const package = require('../package.json');
+
+function createPluginManifest(buffer) {
+  const manifest = JSON.parse(buffer.toString())
+  
+  delete manifest.devDependencies;
+  manifest.scripts = {}
+
+  return JSON.stringify(manifest, null, 2)
+}
 
 module.exports = {
   entry: './src/index.js',
@@ -23,5 +34,18 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        {
+          from: './package.json',
+          to:   './package.json',
+          transform (content) {
+            return createPluginManifest(content)
+          }
+        }
+      ]
+    })
+  ]
 }

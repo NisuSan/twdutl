@@ -1,15 +1,15 @@
 {
   "name": "twdutl",
   "version": "1.0.0",
-  "description": "",
+  "description": "Provide helper function for building tailwindcss utilities plugin",
   "main": "index.js",
   "scripts": {
     "build": "npx webpack --config ./webpack/webpack.config.prod.js --mode=production",
     "serve": "npx webpack serve --config ./webpack/webpack.config.test.js --mode=development",
     "cypress:open": "cypress open"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["tailwindcss", "helper", "plugin", "utilities", "css", "automation"],
+  "author": "n5u <anmik13@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.16.8",
@@ -17,6 +17,7 @@
     "@babel/preset-env": "^7.16.8",
     "autoprefixer": "^10.4.2",
     "babel-loader": "^8.2.3",
+    "copy-webpack-plugin": "^10.2.1",
     "css-loader": "^6.5.1",
     "cypress": "^9.2.1",
     "html-webpack-plugin": "^5.5.0",
