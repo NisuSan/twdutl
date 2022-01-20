@@ -1,7 +1,7 @@
 {
   "name": "twdutl",
   "version": "1.0.0",
-  "description": "Provide helper function for building tailwindcss utilities plugin",
+  "description": "Provide helper function for building tailwindcss utilities",
   "main": "index.js",
   "scripts": {
     "build": "npx webpack --config ./webpack/webpack.config.prod.js --mode=production",
