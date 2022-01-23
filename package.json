@@ -7,7 +7,8 @@
     "build": "npx webpack --config ./webpack/webpack.config.prod.js --mode=production",
     "serve": "npx webpack serve --config ./webpack/webpack.config.test.js --mode=development",
     "cypress:open": "cypress open",
-    "test:jest": "jest jest/index.spec.js"
+    "test:jest": "jest jest/index.spec.js",
+    "test:jest:ci": "jest jest/index.spec.js --ci"
   },
   "keywords": [
     "tailwindcss",
@@ -39,5 +40,8 @@
     "webpack": "^5.66.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.7.3"
+  },
+  "dependencies": {
+    "jest-junit": "^13.0.0"
   }
 }
