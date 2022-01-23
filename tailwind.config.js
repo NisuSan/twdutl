@@ -1,4 +1,4 @@
-const twdutl = require('./src/index')
+const { twdutl } = require('./src/index')
 
 module.exports = {
   content: [

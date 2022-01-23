@@ -6,9 +6,17 @@
   "scripts": {
     "build": "npx webpack --config ./webpack/webpack.config.prod.js --mode=production",
     "serve": "npx webpack serve --config ./webpack/webpack.config.test.js --mode=development",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "test:jest": "jest jest/index.spec.js"
   },
-  "keywords": ["tailwindcss", "helper", "plugin", "utilities", "css", "automation"],
+  "keywords": [
+    "tailwindcss",
+    "helper",
+    "plugin",
+    "utilities",
+    "css",
+    "automation"
+  ],
   "author": "n5u <anmik13@gmail.com>",
   "license": "ISC",
   "devDependencies": {
@@ -19,8 +27,9 @@
     "babel-loader": "^8.2.3",
     "copy-webpack-plugin": "^10.2.1",
     "css-loader": "^6.5.1",
-    "cypress": "^9.2.1",
+    "cypress": "^9.3.1",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.4.7",
     "mini-css-extract-plugin": "2.4.5",
     "postcss": "^8.4.5",
     "postcss-loader": "^6.2.1",
