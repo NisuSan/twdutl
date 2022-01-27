@@ -2,16 +2,28 @@ version: 2.1
 
 orbs:
   node: circleci/node@5.0.0
-
-jobs:
-  build:
+  
+executors:
+  node:
     docker:
       - image: cimg/node:17.4.0
+    working_directory: /app
+
+jobs:
+  install:
+    executor: node
     steps:
       - checkout
       - node/install-packages
+  test:
+    executor: node
+    steps: 
+      - run: ls
 
 workflows:
   default:
     jobs:
-      - build
+      - install
+      - test:
+          requires:
+            - install
