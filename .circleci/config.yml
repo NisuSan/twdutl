@@ -14,9 +14,15 @@ jobs:
     steps:
       - checkout
       - node/install-packages
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - ./*
   test:
     executor: node
     steps: 
+      - attach_workspace:
+          at: ./
       - run: ls
 
 workflows:
