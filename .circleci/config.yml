@@ -38,4 +38,8 @@ workflows:
       - cypress/run:
           requires:
             - module-test
-          start: 'npm run serve'
+          start: npm run serve
+          wait-on: 'http-get://localhost:9000/'
+          post-steps:
+            - store_test_results:
+                path: cypress/results
