@@ -35,7 +35,7 @@ workflows:
       - module-test:
           requires:
             - install
-      - cypress/run:
-          requires:
-            - module-test
-          start: 'npm run serve'
+      # - cypress/run:
+      #     requires:
+      #       - module-test
+      #     start: 'npm run serve'
