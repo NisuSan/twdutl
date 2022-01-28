@@ -24,8 +24,8 @@ jobs:
       - attach_workspace:
           at: ./
       - run: npm run test:jest:ci
-      # - store_test_results:
-      #     path: ./test_reports
+      - store_test_results:
+          path: test-results
 
 workflows:
   default:
