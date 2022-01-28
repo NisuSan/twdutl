@@ -26,7 +26,7 @@ jobs:
           at: ./
       - run: npm run test:jest:ci
       - store_test_results:
-          path: ./test_reports
+          path: ./jest/results
 
 workflows:
   default:
@@ -42,4 +42,4 @@ workflows:
           wait-on: 'http-get://localhost:9000/'
           post-steps:
             - store_test_results:
-                path: cypress/results
+                path: ./cypress/results
