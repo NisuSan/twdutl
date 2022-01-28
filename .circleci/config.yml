@@ -18,17 +18,19 @@ jobs:
           root: ./
           paths:
             - ./*
-  test:
+  module-test:
     executor: node
     steps: 
       - attach_workspace:
           at: ./
-      - run: ls
+      - run: npm run test:jest:ci
+      # - store_test_results:
+      #     path: ./test_reports
 
 workflows:
   default:
     jobs:
       - install
-      - test:
+      - module-test:
           requires:
             - install
