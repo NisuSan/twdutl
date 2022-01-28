@@ -3,7 +3,7 @@ const config = {
   verbose: true,
   reporters: [
     "default",
-    [ "jest-junit", { outputFile: './jest/results/jest.report.xml' } ]
+    [ "jest-junit", { outputFile: './jest/results/report.xml' } ]
   ],
 }
 
