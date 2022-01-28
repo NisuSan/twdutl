@@ -131,4 +131,9 @@ dist
 
 #jest
 junit.xml
-test_reports
+jest/results
+
+#cypress
+cypress/screenshots
+cypress/videos
+cypress/results
