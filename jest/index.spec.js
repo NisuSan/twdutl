@@ -48,7 +48,7 @@ describe('turnToObject function:', () => {
 
 describe('trimForDynamic function:', () => {
   it('should return string key-smth', () => {
-    expect(trimForDynamic('key-smth-{k}')).toBe('key-smth')
+    expect(trimForDynamic('keys-smth-{k}')).toBe('key-smth')
   })
 
   it('should throw not defined or type error for {str} argument', () => {
