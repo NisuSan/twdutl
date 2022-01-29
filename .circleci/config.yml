@@ -50,7 +50,7 @@ jobs:
           command: ssh-keyscan github.com >> ~/.ssh/known_hosts
       - run:
           name: Versioning
-          command: npm version patch -m "patch to version %s [skip ci]"
+          command: npm version patch -m "Patch to version %s [skip ci]"
       - run:
           name: Push tag & changes to github.com
           command: git push
