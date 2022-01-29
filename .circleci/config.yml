@@ -45,9 +45,9 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "0c:df:17:8e:0c:0d:19:b8:2b:b7:0c:86:82:66:e7:08"
-      # - run:
-      #     name: Add github.com to known hosts
-      #     command: ssh-keyscan github.com >> ~/.ssh/known_hosts
+      - run:
+          name: Add github.com to known hosts
+          command: ssh-keyscan github.com >> ~/.ssh/known_hosts
       - run:
           name: Versioning
           command: npm version patch -m "patch to version %s [skip ci]"
