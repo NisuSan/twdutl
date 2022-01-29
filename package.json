@@ -1,6 +1,6 @@
 {
   "name": "twdutl",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Provide helper function for building tailwindcss utilities",
   "main": "index.js",
   "scripts": {
