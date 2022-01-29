@@ -42,9 +42,9 @@ jobs:
     steps: 
       - attach_workspace:
           at: ./
-      - add_ssh_keys:
-          fingerprints:
-            - $GH_FNGR
+      - run:
+          name: Add github.com to known hosts
+          command: mkdir ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
       - run:
           name: Versioning
           command: npm version patch -m "patch to version %s [skip ci]"
