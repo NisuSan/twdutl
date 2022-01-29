@@ -27,6 +27,37 @@ jobs:
       - run: npm run test:jest:ci
       - store_test_results:
           path: ./jest/results
+  build:
+    executor: node
+    steps: 
+      - attach_workspace:
+          at: ./
+      - run: npm run build
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - ./*
+  release:
+    executor: node
+    steps: 
+      - attach_workspace:
+          at: ./
+      - add_ssh_keys:
+          fingerprints:
+            - $GH_FNGR
+      - run:
+          name: Versioning
+          command: npm version patch -m "patch to version %s [skip ci]"
+      - run:
+          name: Push tag & changes to github.com
+          command: git push
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+      - run:
+          name: Publish the package
+          command: npm publish
+
 
 workflows:
   default:
@@ -43,3 +74,16 @@ workflows:
           post-steps:
             - store_test_results:
                 path: ./cypress/results
+      - build:
+          requires:
+            - cypress/run
+          filters:
+            branches:
+              only: master
+      - release:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+      
