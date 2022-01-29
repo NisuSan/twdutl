@@ -79,11 +79,11 @@ workflows:
             - cypress/run
           filters:
             branches:
-              only: master
+              only: main
       - release:
           requires:
             - build
           filters:
             branches:
-              only: master
+              only: main
       
