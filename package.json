@@ -20,6 +20,14 @@
     "automation"
   ],
   "author": "n5u <anmik13@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NisuSan/twdutl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NisuSan/twdutl/issues"
+  },
+  "homepage": "https://github.com/NisuSan/twdutl",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.16.8",
