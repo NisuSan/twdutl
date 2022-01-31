@@ -62,7 +62,7 @@ jobs:
           command: cd dist && npm version patch
       - run:
           name: Publish the package
-          command: npm publish
+          command: cd dist && npm publish
 
 
 workflows:
