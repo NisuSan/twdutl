@@ -1,6 +1,5 @@
 const path = require('path')
 const CopyPlugin = require("copy-webpack-plugin")
-const package = require('../package.json');
 
 function createPluginManifest(buffer) {
   const manifest = JSON.parse(buffer.toString())
@@ -44,6 +43,10 @@ module.exports = {
           transform (content) {
             return createPluginManifest(content)
           }
+        },
+        {
+          from: './README.md',
+          to:   './README.md',
         }
       ]
     })
