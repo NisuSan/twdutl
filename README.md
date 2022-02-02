@@ -1,4 +1,4 @@
-# twdutl
+# twdutl [![CircleCI](https://circleci.com/gh/NisuSan/twdutl.svg?style=shield)](https://circleci.com/gh/NisuSan/twdutl)
 Provide helper function for building tailwindcss utilities
 
  - Simple in use;
