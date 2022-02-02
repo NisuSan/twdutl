@@ -5,7 +5,7 @@ Provide helper function for building tailwindcss utilities
  - No dependency;
  - Has module & end-to-end tests;
  - Can create static utilities and dynamic utilities in one time;
- - Unpacked size only <packege_size>;
+ - Unpacked size only ~ 5kB;
  - New features in developing now.
 
 ## Install it
@@ -29,7 +29,7 @@ Or just like object prop
 const twdutl = require('twdutl').twdutl
 ```
   
-And then add it to plugin array
+And then add it to plugins array
 
 ```javascript
 plugins: [
@@ -40,16 +40,16 @@ plugins: [
 ```
 
 #### !!!Be aware!!!
-***twdutl*** is **NOT** a module, so you **can't** use `import` statement like this one
+***twdutl*** is **NOT** a module, so it **should not be used** with `import` statement
 
 ```javascript
-import { twdutl } from 'twdutl'
+import { twdutl } from 'twdutl' // will not work
 ```
 
 It will cause `Cannot use import statement outside a module` error.
 
 
-## Usage
+## Use it
 
 Function accepts an array of objects with folowing model
 
@@ -83,5 +83,5 @@ where,
 ***Dynamic*** - if set this flag to `true`, it let you use dynamic values inside your classes
 
 ```html
-<div class="white-op-[15]"></div> <!-- become to background-color: rgba(255, 255, 255, 15%) -->
+<div class="white-op-[15]"></div> <!-- converts to: background-color: rgba(255, 255, 255, 15%) -->
 ```
